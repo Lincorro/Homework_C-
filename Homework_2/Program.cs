@@ -2,18 +2,28 @@
 
 Console.Clear();
 Console.Write("Input first number ");
-int first_Number = Convert.ToInt32(Console.ReadLine());
-Console.Write("Input second number ");
-int second_Number = Convert.ToInt32(Console.ReadLine());
-Console.Write("Input third number ");
-int third_Number = Convert.ToInt32(Console.ReadLine());
-int max = first_Number;
-if (second_Number > max)
+string numbers = Console.ReadLine();
+int size = numbers.Length;
+int index = 0;
+int[] temp = new int[4];
+int max = 0;
+int scor = 0;
+int temp2 = 0;
+for (index = 0; index < size; index++)
 {
-    max = second_Number;
-}
-if (third_Number > max)
-{
-    max = third_Number;
-}
-System.Console.WriteLine(max);
+    while(numbers[index] != ',')
+    {
+        temp[scor] = numbers[index];
+        scor++;
+        index++;
+    }
+     scor = 0;
+     index++;
+     temp2 = Convert.ToInt32(temp[] arg);
+     if ( temp2 > max)
+     {
+         max = temp2;
+     }
+} 
+ System.Console.WriteLine(max);
+
