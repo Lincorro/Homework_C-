@@ -74,3 +74,29 @@
 // 1, 2, 5, 7, 19 -> [1, 2, 5, 7, 19]
 
 // 6, 1, 33 -> [6, 1, 33]
+int[] CreateRandomArray(int size, int minWalue, int maxWalue)
+{
+    int[] newArray = new int[size];
+    for (int i = 0; i < size; i++ )
+    {
+        newArray[i] =  new Random().Next(minWalue, maxWalue+1);
+    }
+    return newArray;
+}
+
+void PrintArray(int[] array)
+{
+    for(int i = 0; i < array.Length; i++)
+    {
+        System.Console.Write(array[i] + " ");
+    }
+    System.Console.WriteLine();
+}
+System.Console.WriteLine("input array size");
+int size = Convert.ToInt32(Console.ReadLine());
+System.Console.WriteLine("input minmal Value of element");
+int minWalue = Convert.ToInt32(Console.ReadLine());
+System.Console.WriteLine("input maximum  Value of element");
+int maxWalue = Convert.ToInt32(Console.ReadLine());
+int[] myArray = CreateRandomArray(size, minWalue, maxWalue);
+PrintArray(myArray)
