@@ -154,19 +154,19 @@ void Print2Darray(int[,] array)
 void SummColuns(int[,] array)
 {
     
-    int[] summ = new int[array.GetLength(0)];
+    int[] summ = new int[array.GetLength(1)];
     for (int i = 0; i < array.GetLength(0); i++)
     {
         for (int j = 0; j < array.GetLength(1); j++)
         {
-            summ[j] +=array[i,j];
+            summ[i] +=array[i,j];
         }
        
     }
     for (int i = 0; i < summ.GetLength(0); i++)
-        {
-           System.Console.Write(summ[i]+" "); 
-        }
+    {
+         System.Console.Write(summ[i]+" "); 
+    }
 }
 
 System.Console.WriteLine("input number of lines");
